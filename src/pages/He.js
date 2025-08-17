@@ -11,6 +11,10 @@ const BarcodeScanner = () => {
       console.log(data.status_verbose);
       if(data.status_verbose === "product found"){
         setProduct(data);
+        setTimeout(()=>{
+          setResult("");
+          setProduct(null);
+        },10000)
       }else{
         alert('Not Found');
       }
