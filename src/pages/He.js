@@ -8,8 +8,13 @@ const BarcodeScanner = () => {
   // Hook to handle camera + 
   const handleBarCode = async ()=>{
     const productDetails = await fetch(`https://world.openfoodfacts.org/api/v0/product/${result}.json`).then((response)=>response.json()).then((data)=>{
-      console.log(data);
-      setProduct(data);
+      console.log(data.status_verbose);
+      if(data.status_verbose === "product found"){
+        setProduct(data);
+      }else{
+        alert('Not Found');
+      }
+      
     })
     
 
