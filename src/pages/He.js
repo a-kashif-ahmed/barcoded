@@ -34,7 +34,7 @@ const BarcodeScanner = () => {
       <div>
         
         <h1 className="tex">Product Details:</h1>
-        <p>Product Name : {product.product.generic_name}</p>
+        <p>Product Name : {product?.product.generic_name}</p>
       </div>
     </div>
   );
