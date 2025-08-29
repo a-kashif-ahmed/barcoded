@@ -1,4 +1,4 @@
-import BarcodeScanner from "./pages/He";
+import BarcodeScanner from "./pages/BarCodeScanner";
 
 
 
